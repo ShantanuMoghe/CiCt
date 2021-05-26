@@ -1,4 +1,4 @@
-//uses o^2 approach
+//uses o(n^2) approach
 function isUnique(givenString){
     var i = 0;
     var isUnique = false;
