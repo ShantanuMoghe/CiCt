@@ -17,5 +17,21 @@ function isPermutation(str1,str2){
     return isPermutationVar;
 }
 
+//A simpler sorted approach:
+
+function isPermutation(str1,str2){
+    var isPermutationVar = false;
+    if(str2.length!= str1.length){
+        isPermutationVar=false;
+    }
+    
+    var sortedStr1 = str1.split('').sort().join('');
+    var sortedStr2 = str2.split('').sort().join('');
+    if(sortedStr1 === sortedStr2){
+        isPermutationVar=true;
+    }
+    return isPermutationVar;
+}
+
 console.log(isPermutation('abcdefg','gbcadef'));//true
 console.log(isPermutation('abc','gbcadef'));//false
